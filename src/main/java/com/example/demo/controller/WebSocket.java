@@ -20,9 +20,7 @@ import java.util.concurrent.ConcurrentHashMap;
 @ServerEndpoint("/webSocket/{username}")
 @Component
 public class WebSocket {
-    public WebSocket(){
-        System.out.println("大搜");
-    }
+    public WebSocket(){}
 
     private static int onlineCount = 0;
 
@@ -112,25 +110,19 @@ public class WebSocket {
 
 
     public static synchronized int getOnlineCount() {
-
         return onlineCount;
-
     }
 
 
 
     public static synchronized void addOnlineCount() {
-
         WebSocket.onlineCount++;
-
     }
 
 
 
     public static synchronized void subOnlineCount() {
-
         WebSocket.onlineCount--;
-
     }
 
 
